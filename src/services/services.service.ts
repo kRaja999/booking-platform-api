@@ -40,6 +40,7 @@ export class ServicesService {
   ): Promise<ServiceEntity> {
     const service = await this.findOne(id);
     Object.assign(service, updateServiceDto);
+
     return this.serviceRepository.save(service);
   }
 
